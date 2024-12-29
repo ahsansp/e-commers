@@ -8,7 +8,9 @@
   <body>
     <script>
       const baseUrl = "https://ahsansp.github.io/e-commers/index.html";
-      window.location.href = `${baseUrl}?path=${window.location.pathname}`;
+      window.location.href = `${baseUrl}?path=${encodeURIComponent(
+        window.location.pathname
+      )}`;
     </script>
   </body>
 </html>
