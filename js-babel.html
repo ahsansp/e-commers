@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSX dengan Babel</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      .halaman {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .judul {
+        color: #399918;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function Halaman() {
+        return (
+          <div className="halaman">
+            <h1 className="judul">Halaman dengan JSX</h1>
+            <p>Ini adalah konten yang dibuat menggunakan JSX dengan Babel.</p>
+          </div>
+        );
+      }
+
+      // Render elemen ke halaman
+      ReactDOM.render(<Halaman />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

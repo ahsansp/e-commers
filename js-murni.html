@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Murni</title>
+    <style>
+      .halaman {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .judul {
+        color: #399918;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      function createHalaman() {
+        const container = document.createElement("div");
+        container.className = "halaman";
+
+        const title = document.createElement("h1");
+        title.className = "judul";
+        title.textContent = "Halaman dengan JavaScript Murni";
+
+        const paragraph = document.createElement("p");
+        paragraph.textContent =
+          "Ini adalah konten yang dibuat menggunakan JavaScript biasa.";
+
+        container.appendChild(title);
+        container.appendChild(paragraph);
+
+        return container;
+      }
+
+      // Tambahkan elemen ke halaman
+      const root = document.getElementById("root");
+      root.appendChild(createHalaman());
+    </script>
+  </body>
+</html>

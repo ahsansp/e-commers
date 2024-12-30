@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>routes</title>
+  </head>
+  <body>
+    <div class="div" id="log"></div>
+    <script>
+      const log = document.getElementById("log");
+      const queryString = window.location.search;
+      const param = new URLSearchParams(queryString);
+      let routes = {
+        "ahsan/": { page: "ahsan_site", param: "param" },
+      };
+      log.innerHTML = routes[param.get("path")];
+    </script>
+  </body>
+</html>
